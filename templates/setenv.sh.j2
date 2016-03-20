@@ -1,0 +1,2 @@
+export JAVA_OPTS="$JAVA_OPTS -Djava.rmi.server.hostname={{hostname}} -agentlib:jdwp=transport=dt_socket,address={{tomcat_debug_port}},suspend=n,server=y"
+export CATALINA_OPTS="-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port={{tomcat_jmx_port}} -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false"

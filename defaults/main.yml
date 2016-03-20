@@ -2,7 +2,8 @@
 # defaults file for ansible-liferay
 
 # The version to be installed
-liferay_version: 6.2-ce-ga2
+# must match a file in the versions directory
+liferay_version: 7.0-ce-b8
 
 liferay_base_dir: /opt/liferay
 
@@ -31,3 +32,11 @@ mysql_connector_archive_shasum: aa73201130c765a33864d4d3aaab19dc07ef50ccc9df5924
 
 # Enable/disable remote debugging for the Liferay Tomcat server.
 liferay_enable_remote_debug: false
+# Configure remote debugging 
+hostname: 0.0.0.0
+tomcat_jmx_port: 1099
+tomcat_debug_port: 8000
+
+
+
+

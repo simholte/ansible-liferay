@@ -170,6 +170,17 @@
     mode=755
   notify: service liferay restart
 
+- name: copy setenv script if remote debugging is enabled
+  tags: liferay
+  template:
+    src=setenv.sh.j2
+    dest={{liferay_tomcat_dir}}/bin/setenv.sh
+    owner={{liferay_service_user}}
+    group={{liferay_service_group}}
+    mode=755
+  notify: service liferay restart
+  when: liferay_enable_remote_debug
+
 - name: define service
   tags: liferay
   service:
