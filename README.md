@@ -49,8 +49,8 @@ the following variables must also be defined in the playbook:
 Dependencies
 ------------
 
-* [ansible-java](https://github.com/silpion/ansible-java.git)
-* [galaxy-mysql](https://github.com/bennojoy/mysql.git)
+* [oracle-java](https://galaxy.ansible.com/detail#/role/2851)
+* [geerlingguy.mysql](https://galaxy.ansible.com/geerlingguy/mysql/)
 
 Example Playbook
 ----------------

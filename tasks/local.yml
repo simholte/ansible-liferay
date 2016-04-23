@@ -15,7 +15,7 @@
     dest={{ local_ansible_data_path }}/{{ liferay_bundle_archive }}
     url={{ liferay_download_base_url }}/{{ liferay_bundle_archive }}
     mode=0644
-    sha256sum={{ liferay_bundle_archive_shasum }}
+    checksum={{ liferay_bundle_archive_shasum }}
 
 - name: Download MySQL connector (local)
   tags: liferay

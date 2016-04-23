@@ -3,9 +3,12 @@
 
 # The version to be installed
 # must match a file in the versions directory
-liferay_version: 7.0-ce-b8
+liferay_version: 7.0-ce-rc1
 
 liferay_base_dir: /opt/liferay
+
+# default java home
+java_home: /usr/java/default
 
 # The home directory of the Liferay Portal installation
 liferay_home_dir_name: "liferay-portal-{{ liferay_version }}"
@@ -29,6 +32,23 @@ mysql_connector_version: 5.1.29
 mysql_connector_download_base_url: "http://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/{{mysql_connector_version}}"
 mysql_connector_archive: "mysql-connector-java-{{mysql_connector_version}}.jar"
 mysql_connector_archive_shasum: aa73201130c765a33864d4d3aaab19dc07ef50ccc9df59249d21a41f03603d43
+
+liferay_datasource: "h2"
+
+# configuration for mysql data source, using geerlingguy.mysql variables
+mysql_hostname: localhost
+mysql_databases: 
+   - name: liferay
+     collation: utf8_general_ci
+     encoding: utf8
+     replicate: 0
+
+
+mysql_users: 
+   - name: liferay
+     host: 127.0.0.1
+     password: liferay
+     priv: liferay.*:ALL
 
 # Enable/disable remote debugging for the Liferay Tomcat server.
 liferay_enable_remote_debug: false

@@ -3,11 +3,12 @@
 
 # The base URL for the download of the Tomcat bundle
 
-liferay_download_base_url: http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/7.0.0%20B8/
+liferay_download_base_url: http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/7.0.0%20RC1
 
 # The file name and checksum of the Tomcat bundle archive
-liferay_bundle_archive: liferay-portal-tomcat-7.0-ce-b8-20160223094645600.zip
-liferay_bundle_archive_shasum: c578ae983aac057515e3c7a84b18f98d28b3270b
+liferay_bundle_archive: liferay-portal-tomcat-7.0-ce-rc1-20160325160942584.zip
+liferay_bundle_archive_shasum: md5:c835ed48b964af1c9df918c8299f9d9a
 
 # The version of the Tomcat that is bundled in the current Liferay Portal server installation
-liferay_bundle_tomcat_version: 7.0.42
+liferay_bundle_tomcat_version: 8.0.32
+

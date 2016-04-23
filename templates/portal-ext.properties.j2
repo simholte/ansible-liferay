@@ -2,9 +2,12 @@ setup.wizard.enabled=false
 
 liferay.home={{liferay_home_dir}}
 
+{% if liferay_datasource == 'mysql' %}
 jdbc.default.driverClassName=com.mysql.jdbc.Driver
-jdbc.default.url=jdbc:mysql://localhost/{{mysql_db[0].name}}?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
+jdbc.default.url=jdbc:mysql://{{ mysql_hostname }}/{{mysql_databases[0].name}}?useUnicode=true&characterEncoding=UTF-8&useFastDateParsing=false
 jdbc.default.username={{mysql_users[0].name}}
-jdbc.default.password={{mysql_users[0].pass}}
+jdbc.default.password={{mysql_users[0].password}}
+{% endif %}
+
 
 auto.deploy.deploy.dir={{liferay_autodeploy_dir}}

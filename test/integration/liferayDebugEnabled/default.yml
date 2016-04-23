@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  vars:
+    liferay_enable_remote_debug: true
+  roles:
+    - williamyeh.oracle-java
+    - ansible-liferay

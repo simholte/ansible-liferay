@@ -1,0 +1,10 @@
+---
+
+- hosts: all
+  vars:
+    mysql_user_home: /home/vagrant
+    liferay_datasource: mysql
+  roles:
+    - williamyeh.oracle-java
+    - geerlingguy.mysql
+    - ansible-liferay

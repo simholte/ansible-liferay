@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  roles:
+    - williamyeh.oracle-java
+    - ansible-liferay
