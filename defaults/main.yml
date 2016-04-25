@@ -8,7 +8,7 @@ liferay_version: 7.0-ce-rc1
 liferay_base_dir: /opt/liferay
 
 # default java home
-java_home: /usr/java/default
+java_home: /usr/lib/jvm/default-java
 
 # The home directory of the Liferay Portal installation
 liferay_home_dir_name: "liferay-portal-{{ liferay_version }}"

@@ -10,7 +10,7 @@ respawn limit 10 5
 setuid {{ liferay_service_user }}
 setgid {{ liferay_service_group }}
 
-env JAVA_HOME=/usr/java/default
+env JAVA_HOME={{ java_home }}
 env CATALINA_HOME={{ liferay_tomcat_dir }}
 env CATALINA_BASE={{ liferay_tomcat_dir }}
 
