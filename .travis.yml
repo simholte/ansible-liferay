@@ -1,0 +1,21 @@
+---
+language: python
+python: "2.7"
+
+env:
+  - ANSIBLE_VERSION=latest
+
+
+sudo: required
+services:
+  - docker
+
+before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq python-apt ruby
+
+install:
+  - if [ "$ANSIBLE_VERSION" = "latest" ]; then pip install ansible; else pip install ansible==$ANSIBLE_VERSION; fi
+  #- sudo gem install busser --no-ri --no-rdoc
+  #- sudo busser plugin install busser-bats
+  - ansible-galaxy install requirements-test.yml
